@@ -50,3 +50,30 @@ if (logoEl) {
     if (e.key === 'Enter') window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
+
+/* ── Mobile nav menu ── */
+const navToggle = document.getElementById('navToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+if (navToggle && mobileMenu) {
+  const closeMenu = () => {
+    navToggle.setAttribute('aria-expanded', 'false');
+    mobileMenu.classList.remove('open');
+  };
+  const openMenu = () => {
+    navToggle.setAttribute('aria-expanded', 'true');
+    mobileMenu.classList.add('open');
+  };
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navToggle.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeMenu() : openMenu();
+  });
+
+  mobileMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') closeMenu();
+  });
+}

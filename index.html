@@ -89,10 +89,27 @@
     <li><a href="#contact">Contact</a></li>
   </ul>
 
-  <button class="nav-cta" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to booking form">
-    Book Now
-  </button>
+  <div class="nav-right">
+    <button class="nav-cta" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})" aria-label="Scroll to booking form">
+      Book Now
+    </button>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
 </nav>
+
+<!-- ══ MOBILE MENU ══ -->
+<div class="mobile-menu" id="mobileMenu">
+  <ul role="list">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#booking">Book Online</a></li>
+    <li><a href="#why">About Us</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div>
 
 
 <!-- ══ HERO ══ -->
@@ -140,34 +157,6 @@
           <svg class="trust-badge-icon" aria-hidden="true"><use href="#ic-check-circle"/></svg>
           Satisfaction Guaranteed
         </span>
-      </div>
-    </div>
-
-    <!-- Right: photo -->
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hero-photo-frame">
-        <img
-          src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=900&q=80"
-          alt="Prairie Clean Co. professional cleaner smiling"
-          class="hero-photo"
-          loading="eager"
-          onerror="this.closest('.hero-photo-frame').style.display='none'"
-        />
-        <div class="hero-photo-overlays">
-          <div class="hp-badge">
-            <div class="hp-badge-icon">
-              <svg width="20" height="20" style="color:#F59E0B"><use href="#ic-star"/></svg>
-            </div>
-            <div>
-              <div class="hp-badge-top">4.9 Rating</div>
-              <div class="hp-badge-sub">200+ Reviews</div>
-            </div>
-          </div>
-          <div class="hp-avail">
-            <span class="hp-avail-dot" aria-hidden="true"></span>
-            Available Today
-          </div>
-        </div>
       </div>
     </div>
   </div>
